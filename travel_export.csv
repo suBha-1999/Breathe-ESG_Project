@@ -1,0 +1,3 @@
+Employee_ID,Travel_Date,Origin_IATA,Dest_IATA,Cabin_Class,Cost
+EMP-001,2024-04-10,SFO,JFK,Economy,450.00
+EMP-002,2024-04-12,LHR,CDG,Business,300.00
