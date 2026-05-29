@@ -13,7 +13,7 @@ function App() {
   const fetchRecords = async () => {
     try {
       // Fetching the 7 records from your Django API
-      const response = await axios.get('https://breathe-esg-assignment-nht7.onrender.com')
+      const response = await axios.get('https://breathe-esg-assignment-nht7.onrender.com/api/records/')
       setRecords(response.data)
       setLoading(false)
     } catch (error) {
@@ -24,7 +24,7 @@ function App() {
 
   const handleApprove = async (id) => {
     try {
-      await axios.post(`https://breathe-esg-assignment-nht7.onrender.com/${id}/approve/`)
+      await axios.post(`https://breathe-esg-assignment-nht7.onrender.com/api/records/${id}/approve/`)
       // Update the UI instantly so the analyst doesn't have to refresh
       setRecords(records.map(record => 
         record.id === id ? { ...record, status: 'APPROVED' } : record
